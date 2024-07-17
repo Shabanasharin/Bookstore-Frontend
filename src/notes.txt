@@ -1,0 +1,134 @@
+                                REACT
+                            ---------------
+        1. React is a javascript library 
+        2. Created by facebook (2013)
+        3. Used to build single page web applications
+
+                            PROJECT SETUP
+                    -------------------------------
+        4. Create an applications - npx create-react-app myapp
+        5. cd myapp
+        6. code .
+        7. Run the application : npm start
+        8. Clean the code 
+
+                                BASICS
+                        -----------------------
+        10. Components (Basic building blocks of react)
+           -> React app starts with a single root component. 
+           -> Root component is build using one or more component. 
+           -> Each component can be nested with other component to any level. 
+
+        11. JSX
+                JSX stands for JavaScript XML.
+                JSX provides you to write HTML/XML then preprocessor will transform these expressions into actual JavaScript code.
+                Every JSX is converted to the React.createElement function call that the browser understands
+        12. VDOM
+                It is like a lightweight copy of the actual DOM(a virtual representation of the DOM). 
+                It does not have the power to directly change the layout of the document
+                The virtual DOM gets updated first instead of the real DOM.
+                When anything new is added to the application, a virtual DOM is created and it is represented as a tree.
+                Whenever there is a change in the state of any element, a new Virtual DOM tree is created.
+                New Virtual DOM tree is then compared with the previous Virtual DOM tree and make a note of the changes
+                After this, it finds the best possible ways to make these changes to the real DOM.
+                Now only the updated elements will get rendered on the page again.
+                This process of comparing the current Virtual DOM tree with the previous one is known as ‘diffing’. 
+                The entire process of transforming changes to the real DOM is called Reconciliation
+
+        13. Hooks
+                Hooks were introduced in React 16.8 .
+                It is use React’s features-like managing your component’s state and or performing an after effect when certain changes occur in state(s) without writing a class.
+
+        14. state
+                State represents the value of a dynamic properties of a React component at a given instance.
+                The React useState Hook allows us to track state in a function component.
+                State generally refers to data or properties that need to be tracking in an application
+                useState accepts an initial state and returns two values:
+
+                The current state.
+                A function that updates the state.
+        15. Props 
+                Props (short for properties) are a Component's configuration.
+                A Component cannot change its props, but it is responsible for putting together the props of its child Components.
+                Props do not have to just be data -- callback functions may be passed in as props.
+
+
+                        React Bootstrap Installation
+                -------------------------------------------
+        1 Site: https://react-bootstrap.github.io/
+        2 Installation : npm install react-bootstrap bootstrap
+        3 Index.html   (Paste it into index.html)   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous"/>
+
+                                React Material UI
+                        ----------------------------------
+        1. Site: https://mui.com/material-ui/
+        2. Installation: npm install @mui/material @emotion/react @emotion/styled
+                         npm install @mui/material @mui/styled-engine-sc styled-components
+
+                                React MDB bootstrap
+                        ----------------------------------
+        1. Site: https://mdbootstrap.com/docs/react/
+        2. Installation: npm i mdb-react-ui-kit
+        3. import 'mdb-react-ui-kit/dist/css/mdb.min.css'; to index.js               
+
+                                    Fontawesome
+                        ----------------------------------
+        1. Site: https://mdbootstrap.com/docs/react/
+        2. Installation: npm i @fortawesome/fontawesome-free
+        3. import "@fortawesome/fontawesome-free/css/all.min.css"; to index.js        
+
+                                    Google fonts 
+                        --------------------------------   
+        1. Site: https://fonts.google.com/
+        2. @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Delius&family=Inconsolata&family=Josefin+Sans:wght@300;400&family=Mulish&family=Nunito+Sans:opsz,wght@6..12,200&family=Poppins:wght@300&family=Roboto&family=Rubik+Iso&family=Satisfy&family=Teko:wght@300&display=swap');
+            paste into index.css
+                                    
+                                    Bootswatch (for selecting a theme)
+                        ---------------------------------------------------------
+        1. Site: https://bootswatch.com/
+        2. Download the bootstrap.min.css file and paste in src folder 
+        3. import ./bootstrap.min.css in index.js 
+                                       
+                                    JSON Server
+                        ------------------------------------
+        1. npm init to create package.json file containing the meta data
+        2. Installation: npm install -g json-server 
+        2. Create a JSON file to store the json data -> db.json
+        3. To define port other than 3000(default port):
+                json-server db.json --port port_number
+        4. To run backend
+                json-server db.json --port 3001
+        
+        ---------------------------------------------------------------------------
+        
+        Component Creation in inside the src directory
+                ->Components
+                        ->Header.JSX
+                        ->Footer.JSX
+                        ->AllRest.JSX
+                        ->ViewRest.JSX
+                        ->RestCard.JSX
+        
+        Backend Creation using Json-server(Details in your ppt)
+
+        API fetching using AXIOS (Details in your ppt) 
+        Install axios - npm i axios
+
+        Admin.js
+                Create a function - fetchData
+                Create a useEffect used to call function
+                Create a useState - for holding employee details
+                Display the details in the table
+
+        Routing
+
+        localhost:3000 -> fetch all the restaurants Details
+        localhost:3000/view/id - view particular restaurant details
+
+        The react-router-dom package contains bindings for using React Router in web applications.
+
+        Installation - npm i react-router-dom
+
+        ->BrowserRouter - Use all app routes are Routing (Used to render full application )
+        ->Routes -Used for multiple component to route
+        ->Route - Used for single component to route
